@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <string>
+
+
+void delay_1day(){
+printf("%s", "...\n");
+}
+
+void getResponse(int currentDay);
+
+
+int main()
+{
+    int day = 0;
+    int x = 0;
+    while(x<25) {
+         if (day % 7 == 1){
+            printf("%s", "Back to Work\n");
+        }  else if (day % 7 == 3){
+            printf("%s", "Hump day\n");
+        } else if (day % 7 == 6){
+            printf("%s", "Weekend!\n");
+        }
+        delay_1day();
+        day++;
+        
+    }
+
+
+    while(x<25) {
+        getResponse(day);
+        delay_1day();
+        day++;
+        x++;
+    }
+
+    return 0;
+}
+
+//void getResponse(int currentDay){
+//    switch(currentDay % 7){
+//    case 1:
+//        printf("%s", "Back to Work\n");
+//        break;
+//    case 3:
+//        printf("%s", "Hump day\n");
+//        break;
+//    case 6:
+//        printf("%s", "Weekend!\n");
+//        break;
+//    default:
+//        break;
+//    }
+//}
